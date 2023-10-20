@@ -1,30 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="scripts/main.js"></script>
+    <title>Allie's Opinions </title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            background: linear-gradient(to bottom, #7d124b, #f196c4);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100%; /* Ensure the body fills the entire viewport height */
+            position: relative; /* Set the body's position to relative */
+        }
+        header {
+            background: transparent;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        /* ... (other styles remain the same) ... */
+        footer {
+            background: transparent;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    
+
+        h1 {
+            font-size: 36px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background:   #bb6f95;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        
+    </style>
 </head>
 <body>
-    <section id="section1" class="page-section">
-        <h1>Welcome to Section 1!</h1>
-        <p>Content for section 1 goes here.</p>
-    </section>
+    <header>
+        <h1>Welcome to Allie's Amazing Opinions, and the rest of your life.</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <section id="section2" class="page-section">
-        <h1>Welcome to Section 2!</h1>
-        <p>Content for section 2 goes here.</p>
-    </section>
+    <main>
+        <section>
+            <h2>Why Exercise is an Entirely Hate Relationship, No Love Involved</h2>
+            <p>
+                Exercise, the timeless dance of pain. It's like that friend who's not a friend, who you hate.
+                You start without enthusiasm, and you end feeling even more drained, wondering how that is possible. You tie your shoes, grab your water bottle, and set off lacking any grace. But then, reality hits.
+                First, there's the inner debate. "Why am I doing this again?" you wonder as you jog, knowing that the fabled runner's high is a lie. As you continue, you enter the bargaining phase with your body. "Just a few more minutes," you promise yourself, but your legs have their doubts.
+                Next comes the sweat, and you start to feel disgusting, like your body is punishing you, and rightly so. The thought crosses your mind, "Is sweating this much even legal?" But you power through, channeling your inner superhero, until the villain arrives, in the form of a grey SUV.
+                That's right, you were just hit by a car. You're bleeding and in shock, and you cement your hatred of running forever. You awake from the mind control of society, realizing that your peers have been brain washed to think they enjoyt the pain brought on by exercise.  
+                So, now that you know, save yourself. Cast aside the norms of society, and wake up from the nightmare that is exercise. 
+                You are finally free.
+        
+            </p>
+        </section>
+    </main>
     
-    <section id="section3" class="page-section">
-        <h1>Welcome to Section 3!</h1>
-        <p>Content for section 3 goes here.</p>
-    </section>
-
-    <section id="counter" class="page-section">
-        <h1>Counter</h1>
-        <p>Count: <span id="count">0</span></p>
+    <footer>
+        <p>&copy; 2023 Allie's Amazing Opinions</p>
+    </footer>
 </body>
 </html>

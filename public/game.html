@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Allie's Amazing Opinions</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Canvas Game</title>
     <style>
         html {
         height: 100%;
@@ -57,11 +58,10 @@
         }
     </style>
 </head>
+
 <body>
-    <script src = "audio.js">
-    </script>
     <header>
-        <h1>Contact Allie's Amazing Opinions</h1>
+        <h1>Games at Allie's Amazing Opinions</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -73,23 +73,11 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Contact Us</h2>
-            <p>Stalker. Too bad for you, I'm watching you through your camera right now.</p>
-            <button id="trick-button">Trick Button</button>
-        </section>
     </main>
     <footer>
         <p>&copy; 2023 Allie's Amazing Opinions</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Create an instance of the Main class
-            document.mainClass = new Main();
-            // Call the playJaws function to play the audio
-            document.mainClass.playJaws();
-        });
-    </script>
-    
+    <canvas id="gameCanvas" width="600" height="800"></canvas>
+    <script src="scripts/game.js"></script>
 </body>
 </html>

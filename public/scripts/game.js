@@ -65,6 +65,27 @@ class Game {
     }
 }
 
+
+
+// Add a click event listener to the canvas
+canvas.addEventListener("click", function(event) {
+    const clickX = event.clientX - canvas.getBoundingClientRect().left;
+    const clickY = event.clientY - canvas.getBoundingClientRect().top;
+
+    // Check if the click occurred inside the rectangle
+    if (
+        clickX >= rectX &&
+        clickX <= rectX + rectWidth &&
+        clickY >= rectY &&
+        clickY <= rectY + rectHeight
+    ) {
+        changeRectangleColor();
+    }
+});
+
+// Initial drawing of the white rectangle
+drawRectangle();
+
 // Initialize the game
 document.myGame = new Game();
 

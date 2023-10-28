@@ -1,10 +1,15 @@
 class Main {
     constructor() {
+        var tempThis = this;
         this.pageViewsKey = 'pageViewsCount';
         this.lastVisitKey = 'lastVisitTime';
-        this.initializeCounter();
-        this.displayCount();
-        this.displayLastVisitTime();
+        // this.initializeCounter();
+        // this.displayCount();
+        // this.displayLastVisitTime();
+
+        window.addEventListener('load', () => {
+            tempThis.onPageLoad();
+        });
     }
 
     // ... Existing methods ...
@@ -35,64 +40,71 @@ class Main {
         localStorage.setItem(this.pageViewsKey, currentCount.toString());
     }
 
-    displayCount() {
-        this.incrementCount();
-        // Update count in div id count
-        document.getElementById('count').innerHTML = 'You have visited this page ' + localStorage.getItem(this.pageViewsKey) + ' times.'
-    }
+    // displayCount() {
+    //     this.incrementCount();
+    //     // Update count in div id count
+    //     document.getElementById('count').innerHTML = 'You have visited this page ' + localStorage.getItem(this.pageViewsKey) + ' times.'
+    // }
 
     // Function to play Jaws
     playJaws() {
-        const audio = new Audio('/public/audio/Jaws-theme-song.mp3');
+        const audio = new Audio('../audio/Jaws-theme-song.mp3');
         audio.play();
     }
 
     // Method to handle the blackout button functionality
-    handleBlackoutButton() {
-        var isBlackout = false; // Track if the blackout is active
+    // handleBlackoutButton() {
+    //     var isBlackout = false; // Track if the blackout is active
 
-        function startBlackout() {
-            isBlackout = true;
-            document.body.style.backgroundColor = 'black';
-        }
+    //     function startBlackout() {
+    //         isBlackout = true;
+    //         document.body.style.backgroundColor = 'black';
+    //     }
 
-        function stopBlackout() {
-            isBlackout = false;
-            document.body.style.backgroundColor = ''; // Revert to the original background color
-        }
+    //     function stopBlackout() {
+    //         isBlackout = false;
+    //         document.body.style.backgroundColor = ''; // Revert to the original background color
+    //     }
 
-        const blackoutButton = document.getElementById('blackout-button');
+    //     const blackoutButton = document.getElementById('blackout-button');
 
-        blackoutButton.addEventListener('mousedown', startBlackout);
-        blackoutButton.addEventListener('mouseup', stopBlackout);
-        blackoutButton.addEventListener('mouseout', stopBlackout);
+    //     blackoutButton.addEventListener('mousedown', startBlackout);
+    //     blackoutButton.addEventListener('mouseup', stopBlackout);
+    //     blackoutButton.addEventListener('mouseout', stopBlackout);
 
-        // Event binding for touch events (for mobile devices)
-        blackoutButton.addEventListener('touchstart', startBlackout);
-        blackoutButton.addEventListener('touchend', stopBlackout);
+    //     // Event binding for touch events (for mobile devices)
+    //     blackoutButton.addEventListener('touchstart', startBlackout);
+    //     blackoutButton.addEventListener('touchend', stopBlackout);
 
-        // Prevent the default behavior of the button (e.g., form submission)
-        blackoutButton.addEventListener('click', (event) => {
-            event.preventDefault();
-        });
-    }
+    //     // Prevent the default behavior of the button (e.g., form submission)
+    //     blackoutButton.addEventListener('click', (event) => {
+    //         event.preventDefault();
+    //     });
+    // }
+    onPageLoad ()
+{
+    this.playJaws();
+    console.log();
+};
 }
 
 // Create an instance of the Main class
 document.mainClass = new Main();
 
+
+
 // Call the handleBlackoutButton method to set up the blackout button functionality
-document.mainClass.handleBlackoutButton();
+// document.mainClass.handleBlackoutButton();
 
-// Trick button to open a new tab
-document.addEventListener('DOMContentLoaded', function () {
-    // Trick button to open a new tab
-    const trickButton = document.getElementById('trick-button');
+// // Trick button to open a new tab
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Trick button to open a new tab
+//     const trickButton = document.getElementById('trick-button');
 
-    if (trickButton) {
-        trickButton.addEventListener('click', function () {
-            // Replace the URL with the website you want to redirect to
-            window.open('https://puginarug.com/', '_blank');
-        });
-    }
-});
+//     if (trickButton) {
+//         trickButton.addEventListener('click', function () {
+//             // Replace the URL with the website you want to redirect to
+//             window.open('https://puginarug.com/', '_blank');
+//         });
+//     }
+// });

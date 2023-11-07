@@ -10,6 +10,7 @@ backgroundCtx.fillRect(0, 0, backgroundCanvas.width, backgroundCanvas.height);
 const numShapes = 20;
 const animationSpeed = 2;
 
+<<<<<<< Updated upstream
 function randomColor() {
     return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
@@ -26,6 +27,17 @@ function createShape() {
         x: canvas.width,
         y: startY,
         size,
+=======
+// Function to create a square with a random vertical position and color
+function createSquare(x) {
+    const y = Math.random() * (canvas.height - squareHeight);
+    const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256})`;
+    return {
+        x,
+        y,
+        width: squareWidth,
+        height: squareHeight,
+>>>>>>> Stashed changes
         color,
     };
 
@@ -46,6 +58,11 @@ function createShape() {
     requestAnimationFrame(moveShape);
 }
 
+<<<<<<< Updated upstream
 for (let i = 0; i < numShapes; i++) {
     createShape();
 }
+=======
+// Start moving the squares
+moveSquares();
+>>>>>>> Stashed changes
